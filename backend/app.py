@@ -32,3 +32,7 @@ def preprocess_image(data_url):
     # Batch dimension එකක් එකතු කරනවා (1, 224, 224, 3)
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"message": "Plant Disease API is running 🌿"})
